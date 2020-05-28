@@ -5054,6 +5054,9 @@ button.bg-dark:focus {
 .bg-white {
   background-color: #fff !important; }
 
+.bg-white2 {
+  background-color:#1F1F1F  !important; }
+
 .bg-transparent {
   background-color: transparent !important; }
 

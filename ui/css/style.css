@@ -112,7 +112,7 @@ h1, h2, h3, h4, h5,
   background: #000; }
 
 .form-control {
-  height: 48px;
+  height: 40px;
   font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
   .form-control:active, .form-control:focus {
     border-color: #7971ea; }
@@ -868,22 +868,22 @@ h1, h2, h3, h4, h5,
       background-color: #7971ea; }
 
 .footer-section {
-  padding: 7em 0;
-  background-color: #fafafa; }
+  padding: 3em 0;
+  background-color:# }
   .footer-section p {
     font-size: 1rem; }
   .footer-section h3 {
     font-size: .9rem;
     letter-spacing: .1rem;
     text-transform: uppercase;
-    color: #000;
+    color: #ffffff;
     margin-bottom: 1.5rem;
     font-weight: 900; }
   .footer-section .footer-links li {
     margin-bottom: 10px; }
 
 .footer-subscribe .btn {
-  height: 43px;
+  height: 40px;
   line-height: 1; }
 
 .testimony h3 {
