@@ -32,7 +32,7 @@ module.exports = {
                 if(err){
                     res.json({status:'failed', message:err})
                 }else{
-                    res.json({output: 'success', message: info});
+                    res.render('confirmation');
                 }
             })
         })
