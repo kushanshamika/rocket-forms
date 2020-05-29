@@ -1,7 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require("body-parser");
-const formidableMiddleware = require('express-formidable');
 var morgan = require('morgan');
 var user = require('./src/routes/userRoutes');
 var mail = require('./src/routes/mailRoutes');
@@ -20,7 +19,6 @@ mongoose.connect(process.env.DB_HOST, {
 // bodyparser setup
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json());
-app.use(formidableMiddleware());
 
 
 app.use(morgan('combined'));
