@@ -1,0 +1,16 @@
+version: "3"
+services: 
+    backend:
+        container_name: backend
+        restart: always
+        build: ./backend
+        ports: 
+            - "4000:4000"
+    ui:
+        container_name: ui
+        restart: always
+        build: ./ui
+        ports: 
+            - "80:80"
+        links: 
+            - backend
