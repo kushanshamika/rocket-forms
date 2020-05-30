@@ -145,7 +145,7 @@ a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a:hover {
-    color: #3a2ee0;
+    color: #159f1c;
     text-decoration: underline; }
 
 a:not([href]):not([tabindex]) {
@@ -2402,7 +2402,7 @@ fieldset:disabled a.btn {
   color: #1EDC28;
   background-color: transparent; }
   .btn-link:hover {
-    color: #3a2ee0;
+    color: #159f1c;
     text-decoration: underline;
     background-color: transparent;
     border-color: transparent; }
@@ -3902,7 +3902,7 @@ input[type="button"].btn-block {
   border: 1px solid #dee2e6; }
   .page-link:hover {
     z-index: 2;
-    color: #3a2ee0;
+    color: #159f1c;
     text-decoration: none;
     background-color: #e9ecef;
     border-color: #dee2e6; }
