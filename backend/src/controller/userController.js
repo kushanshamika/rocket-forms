@@ -1,14 +1,12 @@
 const User = require('../models/userModel');
-const UIDGenerator = require('uid-generator');
+const uid = require('uid');
 
 module.exports = {
 
     register:function(req, res, next){
 
-        const uidgen = new UIDGenerator(UIDGenerator.BASE16).baseEncoding;
-
         const newUser = new User(req.body);
-        newUser.token = uidgen;
+        newUser.token = uid();
 
         newUser.save((err, user) => {
             

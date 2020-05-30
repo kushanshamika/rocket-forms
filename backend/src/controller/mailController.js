@@ -10,6 +10,16 @@ module.exports = {
             
             if (err) next(err);
 
+            if (!user){
+                
+                res.json({
+                    'status':'failed',
+                    'message':'Invalid token'
+                })
+
+                return;
+            }
+
             var mailBody = ""
             for (let [key, value] of Object.entries(req.fields)){
               mailBody = mailBody +"<li>"+key+"</li><ul><li>"+value+"</li></ul>"
