@@ -1,40 +1,9 @@
-<?php
-// API URL
-$url = 'http://localhost:4000/api/v1/user/register';
 
-// Create a new cURL resource
-$ch = curl_init($url);
-
-// Setup request to send json via POST
-$data = array(
-    'mail' => $_POST['mail']
-);
-$payload = json_encode($data);
-
-// Attach encoded JSON string to the POST fields
-curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
-
-// Set the content type to application/json
-curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
-
-// Return response instead of outputting
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-// Execute the POST request
-$result = curl_exec($ch);
-
-$result = json_decode($result, true);
-
-// Close cURL resource
-curl_close($ch);
-
-echo($result['token']);
-?>
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>OneSchool &mdash; Website by Colorlib</title>
+    <title>Rocket Forms</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -76,10 +45,8 @@ echo($result['token']);
           <div class="mx-auto text-center">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mx-auto d-none d-lg-block  m-0 p-0">
-                <li><a href="#home-section" class="nav-link">Home</a></li>
-                <li><a href="#courses-section" class="nav-link">Courses</a></li>
-                <li><a href="#programs-section" class="nav-link">Programs</a></li>
-                <li><a href="#teachers-section" class="nav-link">Teachers</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="#home-section" class="nav-link">Documentation</a></li>
               </ul>
             </nav>
           </div>
@@ -97,6 +64,8 @@ echo($result['token']);
       
     </header>
 
+	  
+	  
     <div class="intro-section single-cover" id="home-section">
       
       <div class="slide-1 " style="background-image: url('images/img_2.jpg');" data-stellar-background-ratio="0.5">
@@ -118,6 +87,39 @@ echo($result['token']);
       </div>
     </div>
     
+	  <?php
+// API URL
+$url = 'http://localhost:4000/api/v1/user/register';
+
+// Create a new cURL resource
+$ch = curl_init($url);
+
+// Setup request to send json via POST
+$data = array(
+    'mail' => $_POST['mail']
+);
+$payload = json_encode($data);
+
+// Attach encoded JSON string to the POST fields
+curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
+
+// Set the content type to application/json
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+
+// Return response instead of outputting
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+// Execute the POST request
+$result = curl_exec($ch);
+
+$result = json_decode($result, true);
+
+// Close cURL resource
+curl_close($ch);
+
+echo($result['token']);
+?>
+	  
     <div class="site-section">
       <div class="container">
         <div class="row">
@@ -125,9 +127,6 @@ echo($result['token']);
 
             <div class="mb-5">
               <h3 class="text-black">Sample Code</h3>
-              <p class="mb-4">
-                <strong class="text-black mr-3">Schedule: </strong> MWF 9:30 - 11:00
-              </p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim eum iure voluptatum provident natus, deleniti alias corporis dolorem architecto eligendi consequatur, veniam ratione qui adipisci, doloremque aspernatur? Debitis, quia, praesentium.</p>
               <p>Molestias sit temporibus ullam voluptatem quibusdam. Accusamus labore perspiciatis similique veritatis ipsum iure quas. Nulla perspiciatis unde eveniet nihil, nesciunt repellat maxime ab libero minima voluptas dolore repudiandae adipisci. Cumque!</p>
               <p>Enim harum voluptatem, itaque in illum quas temporibus tempore sit tempora quam atque eveniet, non aspernatur dignissimos aliquid praesentium exercitationem delectus, maxime velit saepe! Qui asperiores iure reprehenderit ad voluptas!</p>
@@ -145,263 +144,13 @@ echo($result['token']);
               <p class="mt-4"><a href="#" class="btn btn-primary">Admission</a></p>
             </div>
 
-            <div class="pt-5">
-              <h3 class="mb-5">6 Comments</h3>
-              <ul class="comment-list">
-                <li class="comment">
-                  <div class="vcard bio">
-                    <img src="images/person_1.jpg" alt="Image placeholder">
-                  </div>
-                  <div class="comment-body">
-                    <h3>Jean Doe</h3>
-                    <div class="meta">January 9, 2018 at 2:21pm</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                    <p><a href="#" class="reply">Reply</a></p>
-                  </div>
-                </li>
 
-                <li class="comment">
-                  <div class="vcard bio">
-                    <img src="images/person_1.jpg" alt="Image placeholder">
-                  </div>
-                  <div class="comment-body">
-                    <h3>Jean Doe</h3>
-                    <div class="meta">January 9, 2018 at 2:21pm</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                    <p><a href="#" class="reply">Reply</a></p>
-                  </div>
-
-                  <ul class="children">
-                    <li class="comment">
-                      <div class="vcard bio">
-                        <img src="images/person_1.jpg" alt="Image placeholder">
-                      </div>
-                      <div class="comment-body">
-                        <h3>Jean Doe</h3>
-                        <div class="meta">January 9, 2018 at 2:21pm</div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                        <p><a href="#" class="reply">Reply</a></p>
-                      </div>
-
-
-                      <ul class="children">
-                        <li class="comment">
-                          <div class="vcard bio">
-                            <img src="images/person_1.jpg" alt="Image placeholder">
-                          </div>
-                          <div class="comment-body">
-                            <h3>Jean Doe</h3>
-                            <div class="meta">January 9, 2018 at 2:21pm</div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                            <p><a href="#" class="reply">Reply</a></p>
-                          </div>
-
-                            <ul class="children">
-                              <li class="comment">
-                                <div class="vcard bio">
-                                  <img src="images/person_1.jpg" alt="Image placeholder">
-                                </div>
-                                <div class="comment-body">
-                                  <h3>Jean Doe</h3>
-                                  <div class="meta">January 9, 2018 at 2:21pm</div>
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                                  <p><a href="#" class="reply">Reply</a></p>
-                                </div>
-                              </li>
-                            </ul>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-
-                <li class="comment">
-                  <div class="vcard bio">
-                    <img src="images/person_1.jpg" alt="Image placeholder">
-                  </div>
-                  <div class="comment-body">
-                    <h3>Jean Doe</h3>
-                    <div class="meta">January 9, 2018 at 2:21pm</div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-                    <p><a href="#" class="reply">Reply</a></p>
-                  </div>
-                </li>
-              </ul>
-              <!-- END comment-list -->
-              
-              <div class="comment-form-wrap pt-5">
-                <h3 class="mb-5">Leave a comment</h3>
-                <form action="#" class="p-5 bg-light">
-                  <div class="form-group">
-                    <label for="name">Name *</label>
-                    <input type="text" class="form-control" id="name">
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" class="form-control" id="email">
-                  </div>
-                  <div class="form-group">
-                    <label for="website">Website</label>
-                    <input type="url" class="form-control" id="website">
-                  </div>
-
-                  <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
-                  </div>
-                  <div class="form-group">
-                    <input type="submit" value="Post Comment" class="btn btn-primary">
-                  </div>
-
-                </form>
-              </div>
-            </div>
-
-
-
-          </div>
-          <div class="col-lg-4 pl-lg-5">
-
-            <div class="mb-5 text-center border rounded course-instructor">
-              <h3 class="mb-5 text-black text-uppercase h6 border-bottom pb-3">Course Instructor</h3>
-              <div class="mb-4 text-center">
-                <img src="images/person_2.jpg" alt="Image" class="w-25 rounded-circle mb-4">  
-                <h3 class="h5 text-black mb-4">Christine Downeyy</h3>
-                <p>Lorem ipsum dolor sit amet sectetur adipisicing elit. Ipsa porro expedita libero pariatur vero eos.</p>
-              </div>
-            </div>
-
-          </div>
+			</div>
         </div>
       </div>
     </div>
 
-    <div class="site-section courses-title bg-dark" id="courses-section">
-      <div class="container">
-        <div class="row mb-5 justify-content-center">
-          <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="">
-            <h2 class="section-title">More Courses</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="site-section courses-entry-wrap"  data-aos="fade" data-aos-delay="100">
-      <div class="container">
-        <div class="row">
-
-          <div class="owl-carousel col-12 nonloop-block-14">
-
-            <div class="course bg-white h-100 align-self-stretch">
-              <figure class="m-0">
-                <a href="course-single.html"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
-              </figure>
-              <div class="course-inner-text py-4 px-4">
-                <span class="course-price">$20</span>
-                <div class="meta"><span class="icon-clock-o"></span>4 Lessons / 12 week</div>
-                <h3><a href="#">Study Law of Physics</a></h3>
-                <p>Lorem ipsum dolor sit amet ipsa nulla adipisicing elit. </p>
-              </div>
-              <div class="d-flex border-top stats">
-                <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
-                <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div>
-              </div>
-            </div>
-
-            <div class="course bg-white h-100 align-self-stretch">
-              <figure class="m-0">
-                <a href="course-single.html"><img src="images/img_2.jpg" alt="Image" class="img-fluid"></a>
-              </figure>
-              <div class="course-inner-text py-4 px-4">
-                <span class="course-price">$99</span>
-                <div class="meta"><span class="icon-clock-o"></span>4 Lessons / 12 week</div>
-                <h3><a href="#">Logo Design Course</a></h3>
-                <p>Lorem ipsum dolor sit amet ipsa nulla adipisicing elit. </p>
-              </div>
-              <div class="d-flex border-top stats">
-                <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
-                <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div>
-              </div>
-            </div>
-
-            <div class="course bg-white h-100 align-self-stretch">
-              <figure class="m-0">
-                <a href="course-single.html"><img src="images/img_3.jpg" alt="Image" class="img-fluid"></a>
-              </figure>
-              <div class="course-inner-text py-4 px-4">
-                <span class="course-price">$99</span>
-                <div class="meta"><span class="icon-clock-o"></span>4 Lessons / 12 week</div>
-                <h3><a href="#">JS Programming Language</a></h3>
-                <p>Lorem ipsum dolor sit amet ipsa nulla adipisicing elit. </p>
-              </div>
-              <div class="d-flex border-top stats">
-                <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
-                <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div>
-              </div>
-            </div>
-
-
-
-            <div class="course bg-white h-100 align-self-stretch">
-              <figure class="m-0">
-                <a href="course-single.html"><img src="images/img_4.jpg" alt="Image" class="img-fluid"></a>
-              </figure>
-              <div class="course-inner-text py-4 px-4">
-                <span class="course-price">$20</span>
-                <div class="meta"><span class="icon-clock-o"></span>4 Lessons / 12 week</div>
-                <h3><a href="#">Study Law of Physics</a></h3>
-                <p>Lorem ipsum dolor sit amet ipsa nulla adipisicing elit. </p>
-              </div>
-              <div class="d-flex border-top stats">
-                <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
-                <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div>
-              </div>
-            </div>
-
-            <div class="course bg-white h-100 align-self-stretch">
-              <figure class="m-0">
-                <a href="course-single.html"><img src="images/img_5.jpg" alt="Image" class="img-fluid"></a>
-              </figure>
-              <div class="course-inner-text py-4 px-4">
-                <span class="course-price">$99</span>
-                <div class="meta"><span class="icon-clock-o"></span>4 Lessons / 12 week</div>
-                <h3><a href="#">Logo Design Course</a></h3>
-                <p>Lorem ipsum dolor sit amet ipsa nulla adipisicing elit. </p>
-              </div>
-              <div class="d-flex border-top stats">
-                <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
-                <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div>
-              </div>
-            </div>
-
-            <div class="course bg-white h-100 align-self-stretch">
-              <figure class="m-0">
-                <a href="course-single.html"><img src="images/img_6.jpg" alt="Image" class="img-fluid"></a>
-              </figure>
-              <div class="course-inner-text py-4 px-4">
-                <span class="course-price">$99</span>
-                <div class="meta"><span class="icon-clock-o"></span>4 Lessons / 12 week</div>
-                <h3><a href="#">JS Programming Language</a></h3>
-                <p>Lorem ipsum dolor sit amet ipsa nulla adipisicing elit. </p>
-              </div>
-              <div class="d-flex border-top stats">
-                <div class="py-3 px-4"><span class="icon-users"></span> 2,193 students</div>
-                <div class="py-3 px-4 w-25 ml-auto border-left"><span class="icon-chat"></span> 2</div>
-              </div>
-            </div>
-
-          </div>
-
-         
-
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-7 text-center">
-            <button class="customPrevBtn btn btn-primary m-1">Prev</button>
-            <button class="customNextBtn btn btn-primary m-1">Next</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    
      
     <footer class="footer-section bg-white2">
       
@@ -420,9 +169,9 @@ echo($result['token']);
             
 						<ul class="list-unstyled footer-links">
               
-							<li><a href="#">Home</a></li>
-							<li><a href="#programs-section">Features</a></li>
-							<li><a href="#teachers-section">Team</a></li>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="#">Documentation</a></li>
+							
             
 						</ul>
           
