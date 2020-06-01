@@ -31,6 +31,14 @@
 	text-align: center;
 	font-family: "Montserrat";
 	font-size: 15px;
+	cursor:pointer;
+    color:blue;
+    text-decoration:underline;
+}
+.para2:hover
+{
+	text-decoration:none;
+    text-shadow: 1px 1px 1px #555;
 }
 .para3
 {
@@ -64,7 +72,7 @@ color:#737373}
 	<img class="icon" src="https://thumbs.gfycat.com/ShyCautiousAfricanpiedkingfisher-size_restricted.gif" alt="tik image"/><br>
 	
 	<b><p class="para">Thank you very much for filling out our form .<br></p></b>
-	<p class="para2"><a href=#>Go to our homepage</a><br></p>
+	<p class="para2" onclick="goBack()">Go back<br></p>
 	<br><br><br>
 	<footer class="footer-section bg-white2">
       
@@ -78,6 +86,11 @@ color:#737373}
       		
 			</div>
 		</footer>
+		<script>
+			function goBack() {
+			window.history.back();
+			}
+		</script>
 	
 </body>
 </html>

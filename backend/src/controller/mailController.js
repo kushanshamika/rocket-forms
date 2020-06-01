@@ -40,7 +40,7 @@ module.exports = {
             smtpTransport.sendMail(HelperOptions, (err, info) => {
 
                 if(err){
-                    res.json({status:'failed', message:err})
+                    res.render('error');
                 }else{
                     res.render('confirmation');
                 }
