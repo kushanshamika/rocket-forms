@@ -1,4 +1,34 @@
+<?php
+// API URL
+$url = 'http://rocketforms.ml/api/v1/user/register';
 
+// Create a new cURL resource
+$ch = curl_init($url);
+
+// Setup request to send json via POST
+$data = array(
+    'mail' => $_POST['mail']
+);
+$payload = json_encode($data);
+
+// Attach encoded JSON string to the POST fields
+curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
+
+// Set the content type to application/json
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+
+// Return response instead of outputting
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+// Execute the POST request
+$result = curl_exec($ch);
+
+$result = json_decode($result, true);
+
+// Close cURL resource
+curl_close($ch);
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -75,7 +105,7 @@
               <div class="row justify-content-center align-items-center text-center">
                 <div class="col-lg-6">
                   <h1 data-aos="fade-up" data-aos-delay="0">You have successfully registered</h1>
-					<p data-aos="fade-up" data-aos-delay="100"><span class="text-white">Form ID</span>&nbsp;5ed29803fa98e80cea071f7c</p>
+					<p data-aos="fade-up" data-aos-delay="100"><span class="text-white">Form ID &bullet;</span>&nbsp;<?php echo($result['token']); ?></p>
                 </div>
 
                 
@@ -85,41 +115,7 @@
           </div>
         </div>
       </div>
-    </div>
-    
-	  <?php
-// API URL
-$url = 'http://localhost:4000/api/v1/user/register';
-
-// Create a new cURL resource
-$ch = curl_init($url);
-
-// Setup request to send json via POST
-$data = array(
-    'mail' => $_POST['mail']
-);
-$payload = json_encode($data);
-
-// Attach encoded JSON string to the POST fields
-curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
-
-// Set the content type to application/json
-curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
-
-// Return response instead of outputting
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-// Execute the POST request
-$result = curl_exec($ch);
-
-$result = json_decode($result, true);
-
-// Close cURL resource
-curl_close($ch);
-
-echo($result['token']);
-?>
-	  
+    </div>	  
     <div class="site-section">
       <div class="container">
         <div class="row">
@@ -144,7 +140,7 @@ echo($result['token']);
                 
               </div>
              
-              <p class="mt-4"><a href="#" class="btn btn-primary">Admission</a></p>
+              <!-- <p class="mt-4"><a href="#" class="btn btn-primary">Admission</a></p> -->
             </div>
 
 
@@ -161,7 +157,7 @@ echo($result['token']);
             
 						<p class="mb-5">Powered by RocketForms</p>
           
-						<form method="post" data-aos="fade">
+						<form method="post" action="http://rocketforms.ml/api/v1/mail/739ecbwxg9k" data-aos="fade">
               
 							<div class="form-group row">
 								<div class="col-md-6 mb-3 mb-lg-0">
@@ -241,7 +237,7 @@ echo($result['token']);
             
 						
             
-						<form action="#" class="footer-subscribe">
+						<form action="http://rocketforms.ml/api/v1/mail/739ecbwxg9k" method="POST" class="footer-subscribe">
               
 							<div class="d-flex mb-5">
                
