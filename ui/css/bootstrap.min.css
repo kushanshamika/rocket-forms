@@ -484,6 +484,15 @@ pre {
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px; }
+.row2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+	justify-content:flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px; }
 
 .no-gutters {
   margin-right: 0;

@@ -75,7 +75,7 @@
               <div class="row justify-content-center align-items-center text-center">
                 <div class="col-lg-6">
                   <h1 data-aos="fade-up" data-aos-delay="0">You have successfully registered</h1>
-                  <p data-aos="fade-up" data-aos-delay="100"><a href="#" class="text-white">Form ID</a>&nbsp;5ed29803fa98e80cea071f7c</p>
+					<p data-aos="fade-up" data-aos-delay="100"><span class="text-white">Form ID</span>&nbsp;5ed29803fa98e80cea071f7c</p>
                 </div>
 
                 
@@ -127,20 +127,23 @@ echo($result['token']);
 
             <div class="mb-5">
               <h3 class="text-black">Sample Code</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim eum iure voluptatum provident natus, deleniti alias corporis dolorem architecto eligendi consequatur, veniam ratione qui adipisci, doloremque aspernatur? Debitis, quia, praesentium.</p>
-              <p>Molestias sit temporibus ullam voluptatem quibusdam. Accusamus labore perspiciatis similique veritatis ipsum iure quas. Nulla perspiciatis unde eveniet nihil, nesciunt repellat maxime ab libero minima voluptas dolore repudiandae adipisci. Cumque!</p>
-              <p>Enim harum voluptatem, itaque in illum quas temporibus tempore sit tempora quam atque eveniet, non aspernatur dignissimos aliquid praesentium exercitationem delectus, maxime velit saepe! Qui asperiores iure reprehenderit ad voluptas!</p>
-              <div class="row mb-4">
+              <p><pre style='color:#000000;background:#ffffff;'><span style='color:#808030; '>&lt;</span>form action<span style='color:#808030; '>=</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>rocketforms.ml/api/v1/mail/&lt;FORM_ID></span><span style='color:#800000; '>"</span>
+      		method<span style='color:#808030; '>=</span><span style='color:#800000; '>"</span><span style='color:#0000e6;'>POST</span><span style='color:#800000; '>"</span> <span style='color:#808030; '>></span>
+  <span style='color:#808030; '>&lt;</span>input type<span style='color:#808030; '>=</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>text</span><span style='color:#800000; '>"</span> name<span style='color:#808030; '>=</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>firstName</span><span style='color:#800000; '>"</span><span style='color:#808030; '>></span>
+  <span style='color:#808030; '>&lt;</span>input type<span style='color:#808030; '>=</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>text</span><span style='color:#800000; '>"</span> name<span style='color:#808030; '>=</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>lastName</span><span style='color:#800000; '>"</span><span style='color:#808030; '>></span>
+  <span style='color:#808030; '>&lt;</span>input type<span style='color:#808030; '>=</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>email</span><span style='color:#800000; '>"</span> name<span style='color:#808030; '>=</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>mail</span><span style='color:#800000; '>"</span><span style='color:#808030; '>></span>
+  <span style='color:#808030; '>&lt;</span>textarea name<span style='color:#808030; '>=</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>comment</span><span style='color:#800000; '>"</span><span style='color:#808030; '>></span><span style='color:#808030; '>&lt;</span><span style='color:#808030; '>/</span>textarea<span style='color:#808030; '>></span>
+<span style='color:#808030; '>&lt;</span><span style='color:#808030; '>/</span>form<span style='color:#808030; '>></span>
+</pre>
+<!--Created using ToHtml.com on 2020-06-01 09:18:30 UTC --></p>
+			  <h3 class="text-black">Tutorial Video</h3><br>
+              <div class="row2 mb-4">
                 <div class="col-md-6">
-                  <img src="images/img_1.jpg" alt="Image" class="img-fluid rounded">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/kc0yKMKXFtQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <div class="col-md-6">
-                  <img src="images/img_2.jpg" alt="Image" class="img-fluid rounded">
-                </div>
+                
               </div>
-              <p>Ipsam fuga fugiat vero repudiandae, tenetur a ullam, expedita perspiciatis dolores rem quibusdam numquam dicta sint unde repellat magni recusandae. Id, quibusdam, voluptatum. Amet mollitia ratione, illum animi quia ex?</p>
-              <p>Sint aut repudiandae, in amet nemo. Nobis labore id iure molestias reprehenderit quisquam illo quod cum dolorum aspernatur ut sequi, facere beatae, porro cupiditate magnam laborum laudantium laboriosam ab autem!</p>
-
+             
               <p class="mt-4"><a href="#" class="btn btn-primary">Admission</a></p>
             </div>
 
@@ -148,9 +151,65 @@ echo($result['token']);
 			</div>
         </div>
       </div>
-    </div>
+	  </div>
+    <div class="site-section bg-light" id="contact-section">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-7">
 
-    
+						<h2 class="section-title mb-3">Message Us</h2>
+            
+						<p class="mb-5">Powered by RocketForms</p>
+          
+						<form method="post" data-aos="fade">
+              
+							<div class="form-group row">
+								<div class="col-md-6 mb-3 mb-lg-0">
+                  
+									<input type="text" class="form-control" placeholder="First name">
+               
+								</div>
+								<div class="col-md-6">
+                 
+									<input type="text" class="form-control" placeholder="Last name">
+               
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-md-12">
+                 
+									<input type="text" class="form-control" placeholder="Subject">
+                
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-md-12">
+                  
+									<input type="email" class="form-control" placeholder="Email">
+               
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-md-12">
+									
+									<textarea class="form-control" id="" cols="30" rows="10" placeholder="Write your message here."></textarea>
+                
+								</div>
+							</div>
+							<div class="form-group row">
+								<div class="col-md-6">
+                  
+									<input type="submit" class="btn btn-primary py-3 px-5 btn-block btn-pill" value="Send Message">
+                
+								</div>
+							</div>
+
+						</form>
+          
+					</div>
+				</div>
+			</div>
+		</div>
      
     <footer class="footer-section bg-white2">
       
